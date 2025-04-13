@@ -11,9 +11,9 @@ export default function maxValue( arr ) {
     if( arr.length === 0) {
         return 0;
     }
-
+    
     let max = Number.NEGATIVE_INFINITY; // Initialize max to the smallest possible number
-
+    
     // Iterate through the array to find de maximun value 
     for ( let number of arr ) {
         // Check if the current number is greater than max
@@ -24,3 +24,15 @@ export default function maxValue( arr ) {
     
     return max; // Return the maximum value found in the array 
 }
+
+export function gruopByCurrency( arr ) {
+    
+    // Check if the array is empty 
+    if( arr.length === 0) {
+        return 0;
+    }
+    
+    
+    
+
+} 
