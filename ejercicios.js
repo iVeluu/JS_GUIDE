@@ -30,4 +30,17 @@ export function gruopByCurrency(arr) {
   if (arr.length === 0) {
     return 0;
   }
-} 
+
+  // Create an object to group the items by currency
+  const grouped = arr.reduce((acc, item) => {
+    // Check if the currency already exist in the accumulator object
+    if (!acc[item.currency]) {
+      acc[item.currency] = []; // If not, create an empty object for that currency
+    }
+    acc[item.currency].push(item); // Add the item to the corresponding currency group
+
+    return acc; // Return the acculator object
+  }, {}); // Inialize the accumulator as an empty object
+
+  return grouped;
+}
